@@ -4,25 +4,42 @@
   var nav = document.querySelector('.nav');
   var navToggle = document.querySelector('.nav-toggle');
   if (navToggle && nav) {
+    function setNavOpen(open) {
+      nav.classList.toggle('is-open', open);
+      navToggle.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+
     navToggle.addEventListener('click', function () {
-      nav.classList.toggle('is-open');
+      setNavOpen(!nav.classList.contains('is-open'));
     });
     nav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        nav.classList.remove('is-open');
+        setNavOpen(false);
       });
     });
   }
 
   /* Hero parallax (scroll-based depth) */
   var heroBg = document.querySelector('.hero-bg');
+  var heroBgGraphic = document.querySelector('.hero-bg-graphic');
   var heroDiagonal = document.querySelector('.hero-diagonal');
   var heroVisual = document.querySelector('.hero-visual');
   if (heroBg && heroDiagonal && heroVisual) {
     window.addEventListener('scroll', function () {
+      if (window.innerWidth < 900) {
+        heroBg.style.transform = '';
+        if (heroBgGraphic) heroBgGraphic.style.transform = '';
+        heroDiagonal.style.transform = '';
+        heroVisual.style.transform = '';
+        return;
+      }
       var scrollY = window.scrollY;
-      heroBg.style.transform = 'translateY(' + scrollY * 0.15 + 'px)';
-      heroDiagonal.style.transform = 'translateY(' + scrollY * 0.25 + 'px)';
+      var bgShift = scrollY * 0.15;
+      heroBg.style.transform = 'translateY(' + bgShift + 'px)';
+      if (heroBgGraphic) heroBgGraphic.style.transform = 'translateY(' + bgShift + 'px)';
+      heroDiagonal.style.transform = 'translateY(' + bgShift + 'px)';
       heroVisual.style.transform = 'translateY(' + scrollY * 0.35 + 'px)';
     });
   }
@@ -36,7 +53,7 @@
   var wheelBack = document.querySelector('.hero-car-wheel--back');
   var pathContainer = document.querySelector('.hero-car-path');
   var heroSection = document.querySelector('.hero');
-  var MOBILE_BREAK = 768;
+  var MOBILE_BREAK = 900;
   var viewBox = { w: 1000, h: 200 };
 
   function isMobile() {
@@ -60,6 +77,11 @@
     }
 
     function animateCar() {
+      if (isMobile()) {
+        carEl.style.visibility = 'hidden';
+        return;
+      }
+      carEl.style.visibility = '';
       var rect = pathContainer.getBoundingClientRect();
       if (rect.width === 0 || rect.height === 0) {
         requestAnimationFrame(animateCar);

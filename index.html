@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Keke — The fast, affordable way to ride</title>
   <link rel="icon" href="assets/keke-logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/keke-logo.png" />
@@ -17,14 +17,14 @@
     <a href="index.html" class="logo logo--header">
       <img src="assets/keke-logo.png" alt="Keke" class="logo-img" width="120" height="40" />
     </a>
-    <nav class="nav">
+    <nav class="nav" id="site-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
       <a href="terms.html">Terms & Conditions</a>
       <a href="privacy.html">Privacy & Policy</a>
     </nav>
-    <button class="nav-toggle" aria-label="Open menu">
+    <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
   </header>
@@ -33,6 +33,7 @@
     <!-- Hero -->
     <section id="home" class="hero">
       <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-bg-graphic" aria-hidden="true"></div>
       <div class="hero-diagonal" aria-hidden="true"></div>
       <div class="hero-car-path" aria-hidden="true">
         <svg class="hero-car-path-svg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true">
@@ -52,15 +53,18 @@
       </div>
       <div class="container hero-inner">
         <div class="hero-content">
-          <h1 class="hero-title">The fast,<br>affordable way<br>to ride.</h1>
+          <h1 class="hero-title">The fast, affordable way to ride.</h1>
           <p class="hero-subtitle">Choose from a range of categories and prices</p>
-          <div class="hero-app-stores">
-            <img src="assets/hero-app-stores.png" alt="Download the Keke app — App Store and Google Play" class="hero-app-stores-img" />
-          </div>
         </div>
         <div class="hero-visual">
           <div class="hero-image-wrap">
             <img src="assets/hero-person.png" alt="Person using Keke app on smartphone" class="hero-image" />
+          </div>
+        </div>
+        <div class="hero-cta">
+          <p class="hero-cta-label">Download the Keke app</p>
+          <div class="hero-app-stores">
+            <img src="assets/hero-app-stores.png" alt="Download on the App Store and Google Play" class="hero-app-stores-img" />
           </div>
         </div>
       </div>
@@ -87,15 +91,15 @@
         </article>
 
         <article class="feature feature--2">
+          <div class="feature-content">
+            <h3 class="feature-title">Select the best Driver</h3>
+            <p class="feature-desc">With Keke app, you can book rides and select driver of your choice with options of in-app calls and messages.</p>
+          </div>
           <div class="feature-visual feature-visual--2">
             <div class="phone-wrapper feature-2-phone-wrap">
               <img src="assets/feature-2-phone.png" alt="Keke app — map and ride options" class="phone-wrapper-img" />
               <img src="assets/feature-2-union.png" alt="" class="phone-union-overlay" aria-hidden="true" />
             </div>
-          </div>
-          <div class="feature-content">
-            <h3 class="feature-title">Select the best Driver</h3>
-            <p class="feature-desc">With Keke app, you can book rides and select driver of your choice with options of in-app calls and messages.</p>
           </div>
         </article>
 
