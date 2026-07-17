@@ -1,6 +1,6 @@
-# Keke App Landing Page
+# Keke Ride Landing Page
 
-Landing page for the Keke ride-hailing app, based on the [Figma design](https://www.figma.com/design/mRGh8HSTgacNvYoiyUa3JJ/Keke-app?node-id=610-7497).
+Landing page for the Keke Ride ride-hailing app, based on the [Figma design](https://www.figma.com/design/mRGh8HSTgacNvYoiyUa3JJ/Keke-app?node-id=610-7497).
 
 ## Run locally
 
@@ -37,5 +37,5 @@ Then visit `http://localhost:8000`.
 4. **Get a ride in minutes** — Teal CTA + phone mockup
 5. **Benefits** — Safe and convenient, Happy drivers/riders, Always there for you
 6. **Testimonials** — Quote + author + prev/next
-7. **CTA Banner** — “What are you waiting for?” + Join Keke
+7. **CTA Banner** — “What are you waiting for?” + Join Keke Ride
 8. **Footer** — Logo + social icons
