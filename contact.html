@@ -30,12 +30,12 @@
   </header>
 
   <main class="subpage-main">
-    <section class="subpage-hero">
+    <section class="subpage-hero panel">
       <h1 class="subpage-title">Contact Us</h1>
     </section>
 
     <!-- Contact info block -->
-    <section class="contact-info-block">
+    <section class="contact-info-block panel">
       <div class="contact-info-bg" aria-hidden="true"></div>
       <div class="container contact-info-inner">
         <div class="contact-info-grid">
@@ -56,25 +56,32 @@
     </section>
 
     <!-- Hero image + CTA overlay -->
-    <section class="contact-hero">
+    <section class="contact-hero panel">
       <div class="contact-hero-image-wrap">
         <img src="assets/hero-person.png" alt="Passenger enjoying a Keke ride" class="contact-hero-image" />
       </div>
       <div class="contact-hero-overlay">
         <p class="contact-hero-text">What are you waiting for? Join hundreds of thousands of happy users.</p>
-        <a href="#" class="btn btn-primary btn--lg">Download the app</a>
+        <a href="https://play.google.com/store/apps/details?id=com.kekeride.app" class="btn btn-primary btn--lg" target="_blank" rel="noopener noreferrer">Download the app</a>
       </div>
     </section>
   </main>
 
   <div class="footer-cta-wrapper footer-cta-wrapper--subpage">
     <div class="footer-cta-bg" aria-hidden="true"></div>
-    <section class="cta-banner">
+    <section class="cta-banner panel">
       <div class="cta-banner-content">
         <h2 class="cta-banner-title">Get the app</h2>
         <p class="cta-banner-subtitle">Download on the App Store or Google Play</p>
         <div class="cta-banner-app-stores">
-          <a href="#" class="cta-app-store-link"><img src="assets/hero-app-stores.png" alt="Download the Keke Ride app on App Store and Google Play" class="cta-app-stores-img" /></a>
+          <div class="store-badges">
+            <a class="store-badge-link" href="#" aria-label="Download on the App Store">
+              <img src="assets/badges/app-store-badge.svg" alt="Download on the App Store" class="store-badge-img store-badge-img--apple" width="140" height="47" loading="lazy" />
+            </a>
+            <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=com.kekeride.app" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+              <img src="assets/badges/google-play-badge.svg" alt="Get it on Google Play" class="store-badge-img store-badge-img--google" width="155" height="46" loading="lazy" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -94,6 +101,8 @@
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

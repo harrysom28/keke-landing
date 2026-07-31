@@ -30,22 +30,29 @@
   </header>
 
   <main class="subpage-main">
-    <section class="subpage-hero">
+    <section class="subpage-hero panel">
       <h1 class="subpage-title">About us</h1>
     </section>
 
-    <section class="about-intro">
+    <section class="about-intro panel">
       <div class="about-intro-bg" aria-hidden="true"></div>
       <div class="container about-intro-inner">
         <h2 class="about-intro-heading">What is it about US?</h2>
         <p class="about-intro-text">Keke Ride is your fast, affordable way to ride. We connect passengers with skilled drivers and offer flexible earning opportunities for drivers. Choose from a range of categories and prices, no surge tricks, just fair rides.</p>
         <div class="about-intro-app-stores">
-          <a href="#" class="about-app-link"><img src="assets/hero-app-stores.png" alt="Download on the App Store and Google Play" class="about-app-stores-img" /></a>
+          <div class="store-badges">
+            <a class="store-badge-link" href="#" aria-label="Download on the App Store">
+              <img src="assets/badges/app-store-badge.svg" alt="Download on the App Store" class="store-badge-img store-badge-img--apple" width="140" height="47" loading="lazy" />
+            </a>
+            <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=com.kekeride.app" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+              <img src="assets/badges/google-play-badge.svg" alt="Get it on Google Play" class="store-badge-img store-badge-img--google" width="155" height="46" loading="lazy" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="about-mission">
+    <section class="about-mission panel">
       <div class="container">
         <div class="about-mission-grid">
           <div class="about-mission-images">
@@ -71,7 +78,7 @@
       </div>
     </section>
 
-    <section class="about-offer">
+    <section class="about-offer panel">
       <div class="about-offer-bg" aria-hidden="true"></div>
       <div class="container">
         <h2 class="about-section-title about-section-title--light">What We Offer?</h2>
@@ -86,7 +93,7 @@
       </div>
     </section>
 
-    <section class="about-footer-cta">
+    <section class="about-footer-cta panel">
       <div class="container">
         <div class="about-safety-wrap">
           <span class="about-safety-logo">Safety Tips</span>
@@ -101,12 +108,19 @@
 
   <div class="footer-cta-wrapper footer-cta-wrapper--subpage">
     <div class="footer-cta-bg" aria-hidden="true"></div>
-    <section class="cta-banner">
+    <section class="cta-banner panel">
       <div class="cta-banner-content">
         <h2 class="cta-banner-title">Get the app</h2>
         <p class="cta-banner-subtitle">Download on the App Store or Google Play</p>
         <div class="cta-banner-app-stores">
-          <a href="#" class="cta-app-store-link"><img src="assets/hero-app-stores.png" alt="Download the Keke Ride app on App Store and Google Play" class="cta-app-stores-img" /></a>
+          <div class="store-badges">
+            <a class="store-badge-link" href="#" aria-label="Download on the App Store">
+              <img src="assets/badges/app-store-badge.svg" alt="Download on the App Store" class="store-badge-img store-badge-img--apple" width="140" height="47" loading="lazy" />
+            </a>
+            <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=com.kekeride.app" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+              <img src="assets/badges/google-play-badge.svg" alt="Get it on Google Play" class="store-badge-img store-badge-img--google" width="155" height="46" loading="lazy" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -126,6 +140,8 @@
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

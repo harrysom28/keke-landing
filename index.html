@@ -32,7 +32,7 @@
 
   <main>
     <!-- Hero -->
-    <section id="home" class="hero">
+    <section id="home" class="hero panel">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-bg-graphic" aria-hidden="true"></div>
       <div class="hero-diagonal" aria-hidden="true"></div>
@@ -65,7 +65,14 @@
         <div class="hero-cta">
           <p class="hero-cta-label">Download the Keke Ride app</p>
           <div class="hero-app-stores">
-            <img src="assets/hero-app-stores.png" alt="Download on the App Store and Google Play" class="hero-app-stores-img" />
+            <div class="store-badges">
+            <a class="store-badge-link" href="#" aria-label="Download on the App Store">
+              <img src="assets/badges/app-store-badge.svg" alt="Download on the App Store" class="store-badge-img store-badge-img--apple" width="140" height="47" loading="lazy" />
+            </a>
+            <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=com.kekeride.app" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+              <img src="assets/badges/google-play-badge.svg" alt="Get it on Google Play" class="store-badge-img store-badge-img--google" width="155" height="46" loading="lazy" />
+            </a>
+          </div>
           </div>
         </div>
       </div>
@@ -73,7 +80,7 @@
     </section>
 
     <!-- Our Features -->
-    <section id="about" class="features">
+    <section id="about" class="features panel">
       <div class="features-bg-pattern" aria-hidden="true"></div>
       <div class="container">
         <h2 class="section-title">Our Features</h2>
@@ -119,7 +126,7 @@
     </section>
 
     <!-- Get a ride in minutes -->
-    <section class="ride-cta">
+    <section class="ride-cta panel">
       <div class="ride-cta-bg-pattern" aria-hidden="true"></div>
       <div class="ride-cta-para" aria-hidden="true"></div>
       <div class="container ride-cta-inner">
@@ -134,7 +141,7 @@
     </section>
 
     <!-- Benefits -->
-    <section class="benefits">
+    <section class="benefits panel">
       <div class="benefits-bg-pattern" aria-hidden="true"></div>
       <div class="container">
         <div class="benefits-grid">
@@ -173,7 +180,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials">
+    <section class="testimonials panel">
       <div class="testimonials-bg-pattern" aria-hidden="true"></div>
       <div class="container">
         <h2 class="section-title">Testimonials</h2>
@@ -231,12 +238,19 @@
   <!-- CTA + Footer (shared taxi background) -->
   <div class="footer-cta-wrapper">
     <div class="footer-cta-bg" aria-hidden="true"></div>
-    <section class="cta-banner">
+    <section class="cta-banner panel">
       <div class="cta-banner-content">
         <h2 class="cta-banner-title">Get the app</h2>
         <p class="cta-banner-subtitle">Download on the App Store or Google Play</p>
         <div class="cta-banner-app-stores">
-          <a href="#" class="cta-app-store-link"><img src="assets/hero-app-stores.png" alt="Download the Keke Ride app on App Store and Google Play" class="cta-app-stores-img" /></a>
+          <div class="store-badges">
+            <a class="store-badge-link" href="#" aria-label="Download on the App Store">
+              <img src="assets/badges/app-store-badge.svg" alt="Download on the App Store" class="store-badge-img store-badge-img--apple" width="140" height="47" loading="lazy" />
+            </a>
+            <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=com.kekeride.app" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+              <img src="assets/badges/google-play-badge.svg" alt="Get it on Google Play" class="store-badge-img store-badge-img--google" width="155" height="46" loading="lazy" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -255,6 +269,8 @@
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

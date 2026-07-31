@@ -134,6 +134,50 @@
     requestAnimationFrame(animateCar);
   }
 
+  function initPanelScrollAnimations() {
+    if (!window.gsap || !window.ScrollTrigger) return;
+
+    var panels = Array.prototype.slice.call(document.querySelectorAll('main .panel'));
+    if (!panels.length) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.getAll().forEach(function (trigger) {
+      if (trigger.vars && trigger.vars.id && trigger.vars.id.indexOf('panel-') === 0) {
+        trigger.kill();
+      }
+    });
+
+    panels.forEach(function (panel, index) {
+      if (panel.classList.contains('hero')) return;
+      gsap.fromTo(panel, {
+        opacity: 0,
+        y: 28
+      }, {
+        opacity: 1,
+        y: 0,
+        duration: 0.55,
+        ease: 'power2.out',
+        scrollTrigger: {
+          id: 'panel-' + index,
+          trigger: panel,
+          start: 'top 88%',
+          toggleActions: 'play none none none'
+        }
+      });
+    });
+  }
+
+  initPanelScrollAnimations();
+  var panelResizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(panelResizeTimer);
+    panelResizeTimer = setTimeout(function () {
+      if (window.ScrollTrigger) {
+        ScrollTrigger.refresh();
+      }
+    }, 180);
+  });
+
   var testimonialCards = document.querySelectorAll('.testimonial-card');
   var prevBtns = document.querySelectorAll('.testimonial-btn--prev');
   var nextBtns = document.querySelectorAll('.testimonial-btn--next');
